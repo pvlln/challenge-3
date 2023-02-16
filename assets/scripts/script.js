@@ -3,9 +3,13 @@ var generateBtn = document.querySelector("#generate");
 
 // Define lists of potential characters for the password
 var lowerChar = 'abcdefghijklmnopqrstuvwxyz';
+var lowArray = lowerChar.split("");
 var upperChar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var upArray = upperChar.split("");
 var numericChar = '1234567890';
+var numArray = numericChar.split("");
 var specialChar = '!"#$%&()*+,-./:;<=>?@^_`{|}~';
+var scArray = specialChar.split("");
 
 function generatePassword(){
     // Ask user input for password length, then verify to continue creating password
@@ -16,19 +20,19 @@ function generatePassword(){
       var elegibleChar = [];
       var lowercase = window.confirm("Would you like to include lowercase letters?");
       if (lowercase){
-        elegibleChar += lowerChar.split('');
+        elegibleChar += lowArray;
       }
       var uppercase = window.confirm("Would you like to include uppercase letters?");
       if (uppercase){
-        elegibleChar += upperChar.split('');
+        elegibleChar += upArray;
       }
       var numeric = window.confirm("Would you like to include numeric characters?");
       if (numeric){
-        elegibleChar += numericChar.split('');
+        elegibleChar += numArray;
       }
       var special = window.confirm("Would you like to include special characters?");
       if (special){
-        elegibleChar += special.split('');
+        elegibleChar += scArray;
       }
       // Validate that user selected at least one character type
       if (!lowercase && !uppercase && !numeric && !special){
