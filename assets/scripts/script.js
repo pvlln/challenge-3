@@ -24,15 +24,15 @@ function generatePassword(){
       }
       var uppercase = window.confirm("Would you like to include uppercase letters?");
       if (uppercase){
-        elegibleChar += ", " + upArray;
+        elegibleChar += upArray;
       }
       var numeric = window.confirm("Would you like to include numeric characters?");
       if (numeric){
-        elegibleChar += ", " + numArray;
+        elegibleChar += numArray;
       }
       var special = window.confirm("Would you like to include special characters?");
       if (special){
-        elegibleChar += ", " + scArray;
+        elegibleChar += scArray;
       }
       console.log(elegibleChar); // CONSOLE CHECK
       // Validate that user selected at least one character type
