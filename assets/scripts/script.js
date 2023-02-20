@@ -3,13 +3,13 @@ var generateBtn = document.querySelector("#generate");
 
 // Define lists of potential characters for the password
 var lowerChar = 'abcdefghijklmnopqrstuvwxyz';
-var lowArray = lowerChar.split("");
+var lowArray = lowerChar;
 var upperChar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-var upArray = upperChar.split("");
+var upArray = upperChar;
 var numericChar = '1234567890';
-var numArray = numericChar.split("");
+var numArray = numericChar;
 var specialChar = '!"#$%&()*+,-./:;<=>?@^_`{|}~';
-var scArray = specialChar.split("");
+var scArray = specialChar;
 
 function generatePassword(){
     // Ask user input for password length, then verify to continue creating password
@@ -40,27 +40,17 @@ function generatePassword(){
         window.alert("You must select at least one character type. Please try again.");
         return;
       }
-      // } else{
-      //   // For loop that chooses random characters up until the password lenght, using
-      //   // elegible characters
-      //   for (let i = 0; i < passwordLength; i++){
-      //     var password = '';
-      //     password += elegibleChar[Math.floor(Math.random())*passwordLength];
-      //   }
-      // }
-      // for (var i = 0; i < passwordLength; i++){
-      //   var password = '';
-      //   password += elegibleChar[Math.floor(Math.random()*passwordLength)];
-      // }
-      // console.log(passwordLength, password); // CONSOLE CHECK
-      // return password;
+    // Validate number of characters
     } else {
       window.alert("You have entered an invalid number of characters. Please try again.")
     }
+    // Define a variable to store the password string
+    var password = '';
+    // For loop that chooses random characters up until the password lenght, using
+    // elegible characters
     for (var i = 0; i < passwordLength; i++){
-      var password = '';
-      password += elegibleChar[Math.floor(Math.random()*passwordLength)];
-      console.log(password, elegibleChar[Math.floor(Math.random()*passwordLength)])
+      password += elegibleChar[Math.floor(Math.random()*elegibleChar.length)];
+      console.log(password)
       //CONSOLE CHECK
     }
     console.log(passwordLength, password); // CONSOLE CHECK
