@@ -1,4 +1,4 @@
-# <CODING BOOTCAMP: CHALLENGE #2>
+# <CODING BOOTCAMP: CHALLENGE #3>
 
 ## Description
 
