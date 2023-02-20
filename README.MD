@@ -4,7 +4,7 @@
 
 The intention of this web development project is to make an application that generates a random password (a string of characters) after taking user preferences from predetermined prompt alerts. The user will answer prompts on desired password length and define what types of characters they want in their password.
 
-My project was deployed to the following website: https://pvlln.github.io/PabloVillalon-challenge-3/
+My project was deployed to the following website: https://pvlln.github.io/pablov-challenge-3-password-application/
 
 Here you will find my finished project. 
 
